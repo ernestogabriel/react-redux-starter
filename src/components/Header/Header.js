@@ -1,9 +1,41 @@
 // IMPORT PACKAGE REFERENCES
 
-import React from 'react';
+import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
 // COMPONENT
+const links = [
+    {
+        id: 1,
+        route: '/',
+        label: 'Home'
+    },
+    {
+        id: 2,
+        route: '/zipcodes',
+        label: 'Zip Codes'
+    },
+    {
+        id: 3,
+        route: '/about',
+        label: 'About'
+    },
+    {
+        id: 4,
+        route: '/pingpong',
+        label: 'Ping Pong Rank'
+    }
+];
+
+const renderLinkItems = (link) => (
+    <Fragment key={link.id}>
+        <li className="nav-item">
+            <div className="nav-link">
+                <NavLink to={link.route} activeClassName='menu selected' exact={true}>{link.label}</NavLink>
+            </div>
+        </li>
+    </Fragment>
+);
 
 export const Header = () => (
     <nav className="navbar navbar-expand-lg navbar-light alert-dark">
@@ -16,21 +48,7 @@ export const Header = () => (
 
         <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
-                <li className="nav-item">
-                    <div className="nav-link">
-                        <NavLink to='/' activeClassName='menu selected' exact={true}>HOME</NavLink>
-                    </div>
-                </li>
-                <li className="nav-item">
-                    <div className="nav-link">
-                        <NavLink to='/zipcodes' activeClassName='menu selected'>ZIP CODES</NavLink>
-                    </div>
-                </li>
-                <li className="nav-item">
-                    <div className="nav-link">
-                        <NavLink to='/about' activeClassName='menu selected'>ABOUT</NavLink>
-                    </div>
-                </li>
+                { links.map(renderLinkItems) }
             </ul>
         </div>
     </nav>

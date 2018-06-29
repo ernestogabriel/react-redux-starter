@@ -12,16 +12,6 @@ const links = [
     },
     {
         id: 2,
-        route: '/zipcodes',
-        label: 'Zip Codes'
-    },
-    {
-        id: 3,
-        route: '/about',
-        label: 'About'
-    },
-    {
-        id: 4,
         route: '/pingpong',
         label: 'Ping Pong Rank'
     }

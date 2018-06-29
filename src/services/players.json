@@ -1,0 +1,42 @@
+[
+    {
+        "id":0,
+        "fullName": "Gabriel Muller",
+        "totalPoints": 12,
+        "wonMatches": 3,
+        "evenMatches": 0,
+        "looseMatches": 1
+    },
+    {
+        "id":1,
+        "fullName": "Sebastian Mansilla",
+        "totalPoints": 12,
+        "wonMatches": 3,
+        "evenMatches": 0,
+        "looseMatches": 1
+    },
+    {
+        "id":2,
+        "fullName": "Eduardo Ortiz",
+        "totalPoints": 12,
+        "wonMatches": 3,
+        "evenMatches": 0,
+        "looseMatches": 1
+    },
+    {
+        "id":3,
+        "fullName": "Guillermo Bejarano",
+        "totalPoints": 12,
+        "wonMatches": 3,
+        "evenMatches": 0,
+        "looseMatches": 1
+    },
+    {
+        "id":4,
+        "fullName": "Laura Medina",
+        "totalPoints": 12,
+        "wonMatches": 3,
+        "evenMatches": 0,
+        "looseMatches": 1
+    }
+]

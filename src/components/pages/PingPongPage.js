@@ -4,38 +4,55 @@ import React from 'react';
 import img from '../../images/redux-small.png';
 
 import {PlayersList} from '../Player/PlayersList';
-const players = [
-    {
-        id: 1,
-        name: 'Gabriel  Muller',
-        rank: '12',
-        img
-    },
-    {
-        id: 2,
-        name: 'Eduardo Ortiz',
-        rank: '12',
-        img
-    },
-    {
-        id: 3,
-        name: 'Alejandro Pereyra',
-        rank: '12',
-        img
-    },
-    {
-        id: 4,
-        name: 'Laura Medina',
-        rank: '12',
-        img
+import { bindActionCreators } from 'redux';
+import { fetchPlayers } from '../state/actions/PlayersActions';
+import { LoadingInidicator } from '../shared/LoadingIndicator/LoadingIndicator';
+import { Error } from '../shared/Error/Error';
+
+class PingPongPage extends React.Component {
+    constructor (props){
+        super(props);
     }
-];
 
-const PingPongPage = () => (
-    <main>
-        <p>Ping Pong Page</p>
-        <PlayersList players={players}/>
-    </main>
-);
+    componentDidMount (){
+        this.props.fetchPlayers(); // fetch players from remote when component was already mounted in DOM
+    }
 
-export { PingPongPage };
+    render (){
+        return (
+            <main>
+            <p>Ping Pong Page</p>
+            {
+                this.props.fetched && <PlayersList players={this.props.players} />
+            }
+            {
+                <LoadingInidicator busy={this.props.fetching} />
+            }
+            {
+                this.props.failed && <Error message="Failed to fetch list of players" />
+            }
+            </main>
+        );
+    }
+}
+
+PingPongPage.propTypes = {
+    fetchZipCodes: PropTypes.func.isRequired,
+    fetched: PropTypes.bool.isRequired,
+    fetching: PropTypes.bool.isRequired,
+    failed: PropTypes.bool,
+    players: PropTypes.array.isRequired
+};
+
+const mapStateToProps = state => {
+    const { fetching, fetched, failed, players } = state.players;
+    return { fetching, fetched, failed, players }
+}
+
+const mapDispatchToProps = dispatch => {
+    bindActionCreators( {fetchPlayers}, dispatch);
+}
+
+const hoc = connect(mapStateToProps, mapDispatchToProps)(PingPongPage);
+
+export { hoc as PingPongPage };

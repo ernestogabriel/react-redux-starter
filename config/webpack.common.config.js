@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const CleanWebPackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const commonPaths = require('./common-paths');
 
 const config = {
@@ -29,17 +29,7 @@ const config = {
             },
             {
                 test: /\.s?css$/,
-                use: ExtractTextWebpackPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader'
-                        },
-                        {
-                            loader: 'sass-loader'
-                        }
-                    ]
-                })                
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
                 //exclude: /node_modules/
             },
             {
@@ -49,14 +39,20 @@ const config = {
             }
         ]
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    name: 'common',
+                    chunks: 'initial',
+                    minChunks: 3
+                }
+            }
+        }
+    },
     plugins: [
         new webpack.ProgressPlugin(),
-        new ExtractTextWebpackPlugin('styles.css'),
-        new webpack.optimize.CommonsChunkPlugin({
-            filename: 'common.js',
-            minChunks: 3,
-            name: 'common'
-        }),
+        new MiniCssExtractPlugin('styles.css'),
         new CleanWebPackPlugin(['public'], { root: commonPaths.root }),
         new HtmlWebPackPlugin({
             template: commonPaths.template,

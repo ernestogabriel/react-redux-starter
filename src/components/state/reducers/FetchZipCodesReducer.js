@@ -7,7 +7,7 @@ import {
 
 // INITIALIZE STATE
 
-const initialState = {
+export const initialState = {
     zipCodes: [],
     fetching: false,
     fetched: false,

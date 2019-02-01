@@ -11,7 +11,7 @@ import bootstrap from '../../images/bootstrap4-small.png';
 import sass from '../../images/sass-small.png';
 import webpack from '../../images/webpack-small.png';
 
-
+import { GroceryGrid } from '../Groceries/GroceryGrid';
 // COMPONENT
 
 const HomePage = () => (
@@ -28,6 +28,9 @@ const HomePage = () => (
                 <img className="m-3" height="50" src={sass} alt="Sass" />
                 <img className="m-3" height="50" src={webpack} alt="Webpack" />
             </div>
+        </div>
+        <div className="container">
+            <GroceryGrid />
         </div>
     </main>
 );

@@ -9,18 +9,19 @@ import { Header } from '../Header/Header';
 import { HomePage } from '../pages/HomePage';
 import { AboutPage } from '../pages/AboutPage';
 import { ZipCodesPage } from '../pages/ZipCodesPage';
-
+import { GroceryPage } from '../pages/GroceryPage';
 
 // COMPONENT
 
 export const AppRouter = () => (
     <BrowserRouter>
         <Fragment>
-            <Header />            
+            <Header />
             <Switch>
                 <Route path='/' component={HomePage} exact={true} />
                 <Route path='/zipcodes' component={ZipCodesPage} />
                 <Route path='/about' component={AboutPage} />
+                <Route path='/grocery' component={GroceryPage} />
                 <Redirect to="/" />
             </Switch>
         </Fragment>

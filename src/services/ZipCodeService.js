@@ -1,6 +1,6 @@
 // IMPORT DATA FROM STATIC JSON FILE
 
-import zips from './zips.json';
+import zips from './mocks/zips.json';
 
 
 // COMPONENT

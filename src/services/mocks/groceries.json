@@ -1,0 +1,38 @@
+[
+    {
+        "id": "011",
+        "name": "grocery one",
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
+        "startDate": "",
+        "endDate":"",
+        "stock": 100
+    },
+    {
+        "id": "012",
+        "name": "grocery two",
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
+        "startDate": "",
+        "endDate":"",
+        "stock": 100
+    },
+    {
+        "id": "013",
+        "name": "grocery three",
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
+        "startDate": "",
+        "endDate":"",
+        "stock": 100
+    },
+    {
+        "id": "014",
+        "name": "grocery four",
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
+        "startDate": "",
+        "endDate":"",
+        "stock": 100
+    }
+]

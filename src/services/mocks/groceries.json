@@ -6,7 +6,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
         "startDate": "",
         "endDate":"",
-        "stock": 100
+        "stock": 100,
+        "img": null
     },
     {
         "id": "012",
@@ -15,7 +16,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
         "startDate": "",
         "endDate":"",
-        "stock": 100
+        "stock": 100,
+        "img": null
     },
     {
         "id": "013",
@@ -24,7 +26,8 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
         "startDate": "",
         "endDate":"",
-        "stock": 100
+        "stock": 100,
+        "img": null
     },
     {
         "id": "014",
@@ -33,6 +36,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan a ipsum id mattis. Morbi ultrices, mi suscipit egestas lobortis, leo eros faucibus nibh, quis ultrices mauris purus nec urna. Fusce fringilla leo a tempor gravida. Pellentesque a orci eu nisl consectetur fermentum at at massa. Integer efficitur, massa ut porta rhoncus, lorem justo eleifend quam, vel vehicula ligula leo quis leo. Mauris tempor quis velit in mattis. Phasellus ex sapien, venenatis sit amet velit vitae, rhoncus consectetur quam. Praesent dapibus augue et orci egestas, a rutrum urna aliquam. ",
         "startDate": "",
         "endDate":"",
-        "stock": 100
+        "stock": 100,
+        "img": null
     }
 ]

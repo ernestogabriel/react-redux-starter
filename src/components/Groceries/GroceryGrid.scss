@@ -1,0 +1,22 @@
+.row {
+    &-padding-bottom {
+        padding-bottom: 10px;
+    }
+}
+
+.item-card {
+    .text-max-height {
+        max-height: 100px;
+    }
+    .trunc-ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .grey-screen {
+        width: 100%;
+        background: rgba(154, 152, 152, 0.33);
+        height: 255px;
+        max-height: 255px
+    }
+}

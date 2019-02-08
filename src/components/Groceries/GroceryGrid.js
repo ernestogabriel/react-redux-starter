@@ -9,21 +9,21 @@ import { LoadingIndicator } from '../shared/LoadingIndicator/LoadingIndicator';
 import { Error } from '../shared/Error/Error';
 import { GroceryCard } from './GroceryCard';
 
-const maxCols = 3;
+import './GroceryGrid.scss';
+
+let maxCols;
 
 const ColGrid = (props) => {
-    console.log(props.data);
     return (
-        <div className="col-sm">
+        <div className={`col-sm-${maxCols}`}>
             <GroceryCard data={props.data} />
         </div>
     );
 };
 
 const RowGrid = (props) => {
-    console.log(props.children);
     return (
-        <div className="row">
+        <div className="row row-padding-bottom">
             {props.children}
         </div>
     );
@@ -35,12 +35,12 @@ class GroceryGrid extends Component {
 
     constructor(props) {
         super(props);
+        maxCols = this.props.cols || 3;
     }
 
     componentDidMount() {
         this.props.fetchGroceries()
             .catch((err) => {
-                console.log(err);
                 this.logMessageError = err.message;
             });
     }
@@ -57,7 +57,7 @@ class GroceryGrid extends Component {
                 const grocery = this.props.groceries[gIndex];
                 jIndex++;
                 gIndex++;
-                children.push(<ColGrid key={grocery.id} data={grocery} />);
+                children.push(<ColGrid key={grocery.data.id} data={grocery.data} />);
             }
             rows.push(<RowGrid key={`row-${xIndex}`}>{children}</RowGrid>);
         }
@@ -66,10 +66,9 @@ class GroceryGrid extends Component {
     }
 
     render() {
-        console.log(this.props.failed);
         return (
             <Fragment>
-                { this.props.fetched &&  this.createRows()}
+                { this.props.fetched &&  this.createRows() }
 
                 { <LoadingIndicator busy={this.props.fetching} /> }
 
@@ -92,7 +91,8 @@ GroceryGrid.propTypes = {
     fetched: PropTypes.bool.isRequired,
     fetching: PropTypes.bool.isRequired,
     failed: PropTypes.bool,
-    groceries: PropTypes.array.isRequired
+    groceries: PropTypes.array.isRequired,
+    cols: PropTypes.number
 };
 
 // CONFIGURE REACT REDUX

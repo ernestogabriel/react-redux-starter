@@ -30,7 +30,7 @@ const HomePage = () => (
             </div>
         </div>
         <div className="container">
-            <GroceryGrid />
+            <GroceryGrid cols={3}/>
         </div>
     </main>
 );

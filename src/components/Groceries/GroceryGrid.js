@@ -15,7 +15,7 @@ let maxCols;
 
 const ColGrid = (props) => {
     return (
-        <div className={`col-sm-${maxCols}`}>
+        <div className={`col-sm-${props.size}`}>
             <GroceryCard data={props.data} />
         </div>
     );
@@ -35,7 +35,7 @@ class GroceryGrid extends Component {
 
     constructor(props) {
         super(props);
-        maxCols = this.props.cols || 3;
+        maxCols = (12 / (this.props.colSize || 3) );
     }
 
     componentDidMount() {
@@ -57,7 +57,7 @@ class GroceryGrid extends Component {
                 const grocery = this.props.groceries[gIndex];
                 jIndex++;
                 gIndex++;
-                children.push(<ColGrid key={grocery.data.id} data={grocery.data} />);
+                children.push(<ColGrid key={grocery.data.id} data={grocery.data} size={this.props.colSize}/>);
             }
             rows.push(<RowGrid key={`row-${xIndex}`}>{children}</RowGrid>);
         }
@@ -79,7 +79,8 @@ class GroceryGrid extends Component {
 }
 
 ColGrid.propTypes = {
-    data: PropTypes.object.isRequired
+    data: PropTypes.object.isRequired,
+    size: PropTypes.number.isRequired
 };
 
 RowGrid.propTypes = {
@@ -92,7 +93,7 @@ GroceryGrid.propTypes = {
     fetching: PropTypes.bool.isRequired,
     failed: PropTypes.bool,
     groceries: PropTypes.array.isRequired,
-    cols: PropTypes.number
+    colSize: PropTypes.number
 };
 
 // CONFIGURE REACT REDUX

@@ -15,12 +15,12 @@ const GroceryImg = (props) => {
     );
 };
 
-const GroceryCard = ({data:{title, summary, img}}) => {
+const GroceryCard = ({data:{name, summary, img}}) => {
     return (
         <div className="card item-card">
             <div className="card-body">
-                <GroceryImg img={img} alt={title}/>
-                <h5 className="card-title">{title}</h5>
+                <GroceryImg img={img} alt={name}/>
+                <h5 className="card-title">{name}</h5>
                 <p className="card-text text-max-height trunc-ellipsis">{summary}</p>
                 <a href="/grocery" className="btn btn-primary">Go somewhere</a>
             </div>
